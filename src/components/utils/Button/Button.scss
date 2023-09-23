@@ -1,0 +1,24 @@
+@import '../../../common/mixins';
+
+.button {
+  display: flex;
+  justify-content: left;
+
+  @media (max-width: 576px) {
+    justify-content: center;
+  }
+
+  button {
+    min-width: 5rem;
+    text-align: center;
+    width: 25%;
+    height: 50px;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.05rem;
+    @include adaptive-font(17, 12);
+    background-color: var(--primary-color);
+  }
+
+}

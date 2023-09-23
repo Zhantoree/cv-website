@@ -1,0 +1,131 @@
+@import '../../common/mixins';
+
+.header {
+  background-color: var(--lbgc);
+  width: 100%;
+  font-family: var(--font-family);
+  text-align: center;
+  @include adaptive-value(padding-bottom, 32, 16, 1);
+  @include adaptive-value(padding-top, 32, 16, 1);
+
+  .container {
+    @extend %default-container;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @media (max-width: 992px) {
+      max-width: 768px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+      position: relative;
+    }
+
+
+    .header__logo {
+      text-align: center;
+      color: var(--secondary-color);
+
+      span {
+        color: var(--primary-color);
+      }
+    }
+
+
+    svg {
+      width: 25px;
+      height: 25px;
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+
+
+    .header__nav {
+      width: 50%;
+      @media (max-width: 768px) {
+        background-color: rgba(33, 35, 44, .9);
+        width: 100vw;
+        height: calc(100vh - 40px);
+        top: 0;
+        right: 0;
+        position: absolute;
+      }
+
+    }
+
+    .header__nav.hidden {
+      width: 50%;
+      @media (max-width: 768px) {
+        width: 100%;
+        display: none;
+        height: calc(100vh - 40px);
+      }
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        position: relative;
+        z-index: 1000;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(33, 35, 44, .9);
+        height: 80%;
+
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+        align-self: flex-end;
+        margin-right: 10%;
+        display: none;
+        @media (max-width: 768px) {
+          display: block;
+        }
+      }
+
+
+      .nav__element {
+        color: var(--secondary-color);
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+          color: white;
+          width: 100%;
+
+        }
+      }
+
+      .nav__element.hidden {
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+
+      }
+
+      .nav__element.nav__button, .nav__element.nav__button.hidden {
+
+        @media (max-width: 768px) {
+          margin-right: 1rem;
+          width: 10%;
+          display: inline;
+          justify-self: flex-end;
+        }
+      }
+    }
+
+  }
+}

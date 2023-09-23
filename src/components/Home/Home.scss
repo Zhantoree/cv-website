@@ -1,0 +1,120 @@
+@import '../../common/mixins';
+
+.home {
+  font-family: var(--font-family);
+
+  .container {
+    justify-content: space-between;
+    @extend %default-container;
+    @include adaptive-value(padding-top, 36, 20, 2);
+    @include adaptive-value(padding-bottom, 36, 20, 2);
+
+    @media (max-width: 992px) {
+      max-width: 768px;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .home__content {
+      width: 40%;
+      text-align: left;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      .home__title {
+        @extend %title-font-size;
+        color: white;
+        font-weight: 500;
+
+        @media (max-width: 576px) {
+          text-align: center;
+        }
+
+        .marked {
+
+          color: var(--primary-color);
+
+        }
+
+        .marked.name {
+          @extend %title-font-size;
+          @include adaptive-font(28, 20);
+          @include adaptive-value(padding-bottom, 24, 10, 1);
+          @include adaptive-value(padding-top, 24, 10, 1);
+          color: var(--primary-color);
+          font-weight: bold;
+          padding: 1.5rem 0;
+
+          @media (max-width: 576px) {
+            text-align: center;
+            //font-size: 1.75rem;
+
+          }
+        }
+
+      }
+
+      .home__subtitle {
+        color: var(--secondary-color);
+        @extend %text-font-size;
+        @include adaptive-value(padding-bottom, 24, 10, 1);
+        @include adaptive-value(padding-top, 24, 10, 1);
+
+        @media (max-width: 576px) {
+          text-align: center;
+        }
+      }
+
+
+
+      .home__links {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+
+        @media (max-width: 992px) {
+          width: 60%;
+        }
+
+          @media (max-width: 576px) {
+          width: 100%;
+        }
+
+        .home__link {
+          svg {
+            width: 25px;
+            height: 25px;
+          }
+
+          font-size: 1.5rem;
+          padding: .5rem;
+          background-color: var(--primary-color);
+          clip-path: var(--clip);
+          transition: all .2s ease;
+
+          &:hover {
+            transform: translateY(-10px);
+          }
+        }
+      }
+      .button {
+        @include adaptive-value(padding-bottom, 24, 10, 1);
+        @include adaptive-value(padding-top, 24, 10, 1);
+      }
+    }
+
+    .home__banner {
+      width: 40%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+
+  }
+}

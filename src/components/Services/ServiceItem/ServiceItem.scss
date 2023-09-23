@@ -1,0 +1,29 @@
+@import "../../../common/mixins";
+
+.item {
+  width: 30%;
+  background-color: var(--bgc);
+  max-height: 500px;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .item__image {
+    svg {
+      height: 10%;
+      color: var(--primary-color);
+    }
+  }
+
+  .item__title {
+    color: white;
+    @include adaptive-value(padding-top, 20, 15, 1);
+    @include adaptive-value(padding-bottom, 20, 15, 1);
+  }
+
+  .item__text {
+    color: var(--secondary-color);
+  }
+}

@@ -1,0 +1,24 @@
+.skills__item {
+  font-family: var(--font-family);
+  color: white;
+  padding-bottom: 40px;
+  margin-left: 0px;
+  font-size: calc(12px + 10 * ((100vw - 320px) / 1080));
+}
+@media (max-width: 1200px) {
+  .skills__item {
+    padding-bottom: calc(30px + 10 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .skills__item {
+    margin-left: calc(10px + -10 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 576px) {
+  .skills__item {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=Skills__item.css.map */

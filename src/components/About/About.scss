@@ -1,0 +1,82 @@
+@import '../../common/mixins';
+
+.about {
+  @include adaptive-value(padding-top, 60, 20, 1);
+  @include adaptive-value(padding-bottom, 60, 20, 1);
+  background-color: var(--lbgc);
+
+  .container {
+    @extend %default-container;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 552px) {
+      flex-direction: column;
+    }
+
+    .about__banner {
+      width: 50%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .about__content {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      
+      .about__title {
+        font-family: var(--font-family);
+        font-weight: 500;
+
+        p {
+          text-align: left;
+          color: white;
+          @extend %title-font-size;
+          padding: 1rem;
+          @include adaptive-value(padding-top, 16, 10, 1);
+          @include adaptive-value(padding-bottom, 16, 10, 1);
+
+          @media (max-width: 552px) {
+            text-align: center;
+          }
+
+          &:nth-child(2) {
+            //font-size: 2rem;
+            @include adaptive-font(32, 20);
+            font-weight: 600;
+          }
+
+          .marked {
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      .about__subtitle {
+        width: 100%;
+        p {
+          text-align: left;
+          //font-size: 1.25rem;
+          @extend %text-font-size;
+          padding-top: 1rem;
+          @include adaptive-value(padding-top, 16, 10, 1);
+          @include adaptive-value(padding-bottom, 32, 16, 1);
+          padding-bottom: 2rem;
+          color: var(--secondary-color);
+          @media (max-width: 552px) {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../common/mixins";
+
+.service {
+  background-color: var(--lbgc);
+  font-family: var(--font-family);
+  @include adaptive-value(padding-top, 100, 20, 1);
+  @include adaptive-value(padding-bottom, 100, 20, 1);
+
+  .container {
+    @extend %default-container;
+    display: flex;
+    flex-direction: column;
+
+    .marked {
+      color: var(--primary-color);
+    }
+
+    .service__title {
+      color: white;
+      @extend %text-font-size;
+      @include adaptive-value(padding-top, 20, 15, 1);
+      @include adaptive-value(padding-bottom, 20, 15, 1);
+
+    }
+
+    .service__subtitle {
+      color: white;
+      @extend %title-font-size;
+      @include adaptive-value(padding-top, 20, 15, 1);
+      @include adaptive-value(padding-bottom, 20, 15, 1);
+
+    }
+    .service__items {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

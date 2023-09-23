@@ -1,0 +1,173 @@
+.home .container {
+  display: flex;
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .home .container {
+    padding-right: calc(40px + -25 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .home .container {
+    padding-left: calc(40px + -25 * ((100vw - 320px) / 880));
+  }
+}
+
+.home .container .home__content .home__title .marked.name, .home .container .home__content .home__title {
+  font-size: calc(16px + 8 * ((100vw - 320px) / 1080));
+}
+
+.home .container .home__content .home__subtitle {
+  font-size: calc(12px + 8 * ((100vw - 320px) / 1080));
+}
+
+.home {
+  font-family: var(--font-family);
+}
+.home .container {
+  justify-content: space-between;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+@media (min-width: 1200px) {
+  .home .container {
+    padding-top: calc(20px + 16 * ((100vw - 320px) / 1080));
+  }
+}
+@media (min-width: 1200px) {
+  .home .container {
+    padding-bottom: calc(20px + 16 * ((100vw - 320px) / 1080));
+  }
+}
+@media (max-width: 992px) {
+  .home .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 576px) {
+  .home .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.home .container .home__content {
+  width: 40%;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .home .container .home__content {
+    width: 100%;
+  }
+}
+.home .container .home__content .home__title {
+  color: white;
+  font-weight: 500;
+}
+@media (max-width: 576px) {
+  .home .container .home__content .home__title {
+    text-align: center;
+  }
+}
+.home .container .home__content .home__title .marked {
+  color: var(--primary-color);
+}
+.home .container .home__content .home__title .marked.name {
+  font-size: calc(20px + 8 * ((100vw - 320px) / 1080));
+  padding-bottom: 24px;
+  padding-top: 24px;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 1.5rem 0;
+}
+@media (max-width: 1200px) {
+  .home .container .home__content .home__title .marked.name {
+    padding-bottom: calc(10px + 14 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .home .container .home__content .home__title .marked.name {
+    padding-top: calc(10px + 14 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 576px) {
+  .home .container .home__content .home__title .marked.name {
+    text-align: center;
+  }
+}
+.home .container .home__content .home__subtitle {
+  color: var(--secondary-color);
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+@media (max-width: 1200px) {
+  .home .container .home__content .home__subtitle {
+    padding-bottom: calc(10px + 14 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .home .container .home__content .home__subtitle {
+    padding-top: calc(10px + 14 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 576px) {
+  .home .container .home__content .home__subtitle {
+    text-align: center;
+  }
+}
+.home .container .home__content .home__links {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+@media (max-width: 992px) {
+  .home .container .home__content .home__links {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .home .container .home__content .home__links {
+    width: 100%;
+  }
+}
+.home .container .home__content .home__links .home__link {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: var(--primary-color);
+  clip-path: var(--clip);
+  transition: all 0.2s ease;
+}
+.home .container .home__content .home__links .home__link svg {
+  width: 25px;
+  height: 25px;
+}
+.home .container .home__content .home__links .home__link:hover {
+  transform: translateY(-10px);
+}
+.home .container .home__content .button {
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+@media (max-width: 1200px) {
+  .home .container .home__content .button {
+    padding-bottom: calc(10px + 14 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .home .container .home__content .button {
+    padding-top: calc(10px + 14 * ((100vw - 320px) / 880));
+  }
+}
+.home .container .home__banner {
+  width: 40%;
+}
+@media (max-width: 768px) {
+  .home .container .home__banner {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=Home.css.map */
