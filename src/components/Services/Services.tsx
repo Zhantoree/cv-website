@@ -1,37 +1,43 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './Services.scss';
 import ServiceItem from "./ServiceItem/ServiceItem";
-import web from '../../assets/img/web.svg'
 
-const items = [
-    {
-        img: web,
-        title: "Web Developer",
-        text: "Blabla"
 
-    },
-    {
-        img: web,
-        title: "Web Developer",
-        text: "Blabla"
+interface ServicesProps {
+    data: {
+        items : [
+            {
+                img: string,
+                title: string,
+                text: string
 
-    },
-    {
-        img: web,
-        title: "Web Developer",
-        text: "Blabla"
+            },
+            {
+                img: string,
+                title: string,
+                text: string
 
-    },
-]
+            },
+            {
+                img: string,
+                title: string,
+                text: string
 
-const Services = () => {
+            },
+        ],
+        title: string[],
+        subtitle: string,
+    }
+}
+const Services: FC<ServicesProps> = ({data: {subtitle, title, items}}) => {
+
     return (
         <section className="service">
             <div className="container">
                 <p className="service__title">
-                    My <span className="marked">Services</span>
+                    {title[0]} <span className="marked">{title[1]}</span>
                 </p>
-                <p className="service__subtitle">What I Do</p>
+                <p className="service__subtitle">{subtitle}</p>
                 <div className="service__items">
                     <ServiceItem items={items}/>
                 </div>

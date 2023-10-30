@@ -2,18 +2,15 @@ import React, {FC} from 'react';
 import './Skills__item.scss'
 
 interface SkillsItemProps {
-    items: string[];
+    item: string;
 }
 
-const SkillsItem: FC<SkillsItemProps> = ({items}) => {
+const SkillsItem: FC<SkillsItemProps> = ({item}) => {
     return (
         <>
-            {items.map(item => {
-                return <div className="skills__item">
+                <div className="skills__item">
                     {item}
                 </div>
-
-            })}
         </>
     );
 };

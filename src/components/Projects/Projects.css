@@ -1,0 +1,60 @@
+.proj .container {
+  display: flex;
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .proj .container {
+    padding-right: calc(40px + -25 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .proj .container {
+    padding-left: calc(40px + -25 * ((100vw - 320px) / 880));
+  }
+}
+
+.proj .container .proj__title p {
+  font-size: calc(18px + 10 * ((100vw - 320px) / 1080));
+  line-height: 1.4;
+}
+
+.proj .container .proj__items .proj__item.item .item__title, .proj .container .proj__subtitle {
+  font-size: calc(14px + 10 * ((100vw - 320px) / 1080));
+  line-height: 1.4;
+}
+
+.proj .container {
+  flex-direction: column;
+}
+.proj .container .proj__title p {
+  color: white;
+}
+.proj .container .proj__title p .marked {
+  color: var(--primary-color);
+}
+.proj .container .proj__subtitle {
+  color: white;
+}
+.proj .container .proj__items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.proj .container .proj__items .proj__item.item {
+  width: 30%;
+}
+.proj .container .proj__items .proj__item.item .item__image {
+  background-size: contain;
+  filter: blur(3px);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.proj .container .proj__items .proj__item.item .item__title {
+  color: white;
+}
+
+/*# sourceMappingURL=Projects.css.map */

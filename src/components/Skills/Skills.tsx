@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {FC} from 'react';
 import Button from "../utils/Button/Button";
 import './Skills.scss'
 import SkillsItem from "./Item/Skills__item";
+import {Data} from "../../store/rootSlice";
 
 const skills = [
     'HTML5 & CSS3',
@@ -9,24 +10,38 @@ const skills = [
     'React',
     'Redux',
     'GitHub',
-    'NodeJS(express)'
+    'NodeJS(express)',
+    'Next JS',
+    'MongoDB'
 ]
 
-const Skills = () => {
+interface SkillsProps {
+    data: {
+        items: string[],
+        suptitle: string[],
+        title: string,
+        subtitle: string,
+        button: string,
+    }
+}
+
+const Skills: FC<SkillsProps> = ({data: {subtitle, button, title , suptitle, items}}) => {
     return (
         <section className="skills">
             <div className="container">
                 <div className="skills__header">
-                    <p className="skills__suptitle">Favourite <span className="marked">Skills</span></p>
-                    <p className="skills__title">My Skills</p>
-                    <p className="skills__subtitle">See fully what skills I have and perform, to develop projects for
-                        you.</p>
+                    <p className="skills__suptitle">{suptitle[0]} <span className="marked">{suptitle[1]}</span></p>
+                    <p className="skills__title">{title}</p>
+                    <p className="skills__subtitle">{subtitle}</p>
                     <div className="skills__button">
-                        <Button text="See Projects"/>
+                        <Button text={button}/>
                     </div>
                 </div>
                 <div className="skills__content">
-                    <SkillsItem items={skills}/>
+
+                    {items.map(item => <SkillsItem item={item}/>)}
+
+
                     {/*<div className="skills__item">HTML5 & CSS3</div>*/}
                     {/*<div className="skills__item">JavaScript</div>*/}
                     {/*<div className="skills__item">React</div>*/}

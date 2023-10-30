@@ -12,3 +12,6 @@ const setupApp = () => {
     })
 }
 export default setupApp
+export type AppStore = ReturnType<typeof setupApp>
+export type AppDispatch = AppStore['dispatch']
+export type RootState = ReturnType<typeof rootReducer>

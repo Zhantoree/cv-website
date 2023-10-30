@@ -37,9 +37,11 @@ $maxWidthContainer: 1200;
 }
 
 %title-font-size {
-  @include adaptive-font(24, 16);
+  @include adaptive-font(28, 18);
+  line-height: 1.4;
 }
 %text-font-size {
-  @include adaptive-font(20, 12);
+  @include adaptive-font(24, 14);
+  line-height: 1.4;
 }
 

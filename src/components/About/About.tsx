@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {FC} from 'react';
 import Banner from "../utils/banner/banner";
 import Button from "../utils/Button/Button";
 import './About.scss'
+import {Data} from "../../store/rootSlice";
 
-const About = () => {
+interface AboutProps {
+    data: {
+        intro: string[],
+        title: string,
+        subtitle: string,
+        button: string
+    }
+}
+
+const About: FC<AboutProps> = ({data: {intro, button, subtitle, title}}) => {
     return (
         <div className="about">
             <div className="container">
@@ -12,14 +22,14 @@ const About = () => {
                 </div>
                 <div className="about__content">
                     <div className="about__title">
-                        <p>My <span className="marked">Intro</span></p>
-                        <p>About Me</p>
+                        <p>{intro[0]} <span className="marked">{intro[1]}</span></p>
+                        <p>{title}</p>
                     </div>
                     <div className="about__subtitle">
-                        <p>Frontend Developer, I create web pages and enjoying when I work.</p>
+                        <p>{subtitle}</p>
                     </div>
                     <div className="about_button">
-                        <Button text="Contact me"/>
+                        <Button text={button}/>
                     </div>
 
                 </div>

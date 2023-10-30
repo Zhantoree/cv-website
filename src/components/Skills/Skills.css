@@ -18,11 +18,13 @@
 }
 
 .skills .container .skills__header .skills__title {
-  font-size: calc(16px + 8 * ((100vw - 320px) / 1080));
+  font-size: calc(18px + 10 * ((100vw - 320px) / 1080));
+  line-height: 1.4;
 }
 
 .skills .container .skills__header .skills__subtitle, .skills .container .skills__header .skills__suptitle {
-  font-size: calc(12px + 8 * ((100vw - 320px) / 1080));
+  font-size: calc(14px + 10 * ((100vw - 320px) / 1080));
+  line-height: 1.4;
 }
 
 .skills {
@@ -133,7 +135,19 @@
   }
 }
 .skills .container .skills__header .button button {
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .skills .container .skills__header .button button {
+    padding-left: calc(5px + 10 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .skills .container .skills__header .button button {
+    padding-right: calc(5px + 10 * ((100vw - 320px) / 880));
+  }
 }
 .skills .container .skills__content {
   width: 40%;

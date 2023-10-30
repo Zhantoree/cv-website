@@ -18,11 +18,13 @@
 }
 
 .about .container .about__content .about__title p {
-  font-size: calc(16px + 8 * ((100vw - 320px) / 1080));
+  font-size: calc(18px + 10 * ((100vw - 320px) / 1080));
+  line-height: 1.4;
 }
 
 .about .container .about__content .about__subtitle p {
-  font-size: calc(12px + 8 * ((100vw - 320px) / 1080));
+  font-size: calc(14px + 10 * ((100vw - 320px) / 1080));
+  line-height: 1.4;
 }
 
 .about {

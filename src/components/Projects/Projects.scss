@@ -1,0 +1,46 @@
+@import "../../common/mixins";
+
+.proj {
+  .container {
+    @extend %default-container;
+    flex-direction: column;
+
+    .proj__title {
+      p {
+        @extend %title-font-size;
+        color: white;
+        .marked {
+          color: var(--primary-color);
+        }
+      }
+
+    }
+
+    .proj__subtitle {
+      @extend %text-font-size;
+      color: white;
+    }
+
+    .proj__items {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .proj__item.item {
+        width: 30%;
+        .item__image {
+
+          background-size: contain;
+          filter: blur(3px);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        .item__title {
+          @extend %text-font-size;
+          color: white;
+        }
+      }
+    }
+  }
+}

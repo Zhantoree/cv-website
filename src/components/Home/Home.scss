@@ -21,10 +21,13 @@
     .home__content {
       width: 40%;
       text-align: left;
+      display: flex;
+      flex-direction: column;
 
       @media (max-width: 768px) {
         width: 100%;
       }
+
       .home__title {
         @extend %title-font-size;
         color: white;
@@ -70,18 +73,20 @@
       }
 
 
-
       .home__links {
         display: flex;
         justify-content: space-between;
+        align-self: flex-start;
         width: 40%;
+        @include adaptive-value('margin-top', 25, 10, 1);
 
         @media (max-width: 992px) {
           width: 60%;
         }
 
-          @media (max-width: 576px) {
-          width: 100%;
+        @media (max-width: 576px) {
+          width: 70%;
+          align-self: center;
         }
 
         .home__link {
@@ -101,6 +106,7 @@
           }
         }
       }
+
       .button {
         @include adaptive-value(padding-bottom, 24, 10, 1);
         @include adaptive-value(padding-top, 24, 10, 1);
