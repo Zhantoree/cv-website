@@ -2,18 +2,7 @@ import React, {FC} from 'react';
 import Button from "../utils/Button/Button";
 import './Skills.scss'
 import SkillsItem from "./Item/Skills__item";
-import {Data} from "../../store/rootSlice";
 
-const skills = [
-    'HTML5 & CSS3',
-    'JavaScript',
-    'React',
-    'Redux',
-    'GitHub',
-    'NodeJS(express)',
-    'Next JS',
-    'MongoDB'
-]
 
 interface SkillsProps {
     data: {

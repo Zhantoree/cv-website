@@ -77,8 +77,9 @@
         display: flex;
         justify-content: space-between;
         align-self: flex-start;
+        justify-self: flex-end;
         width: 40%;
-        @include adaptive-value('margin-top', 25, 10, 1);
+        @include adaptive-value('padding-top', 25, 10, 1);
 
         @media (max-width: 992px) {
           width: 60%;
@@ -94,16 +95,10 @@
             width: 25px;
             height: 25px;
           }
-
           font-size: 1.5rem;
           padding: .5rem;
           background-color: var(--primary-color);
           clip-path: var(--clip);
-          transition: all .2s ease;
-
-          &:hover {
-            transform: translateY(-10px);
-          }
         }
       }
 

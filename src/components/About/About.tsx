@@ -2,7 +2,6 @@ import React, {FC} from 'react';
 import Banner from "../utils/banner/banner";
 import Button from "../utils/Button/Button";
 import './About.scss'
-import {Data} from "../../store/rootSlice";
 
 interface AboutProps {
     data: {

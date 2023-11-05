@@ -64,7 +64,7 @@ const Banner: FC<BannerProps> = ({outlined = false}) => {
       587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843
       438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
 
-                                <rect x="37" width="476" height="630" fill="url(#pattern0)"/>
+                                <rect style={{position: "relative",top: "100px",overflow: "hidden"}} x="37" width="476" height="630" fill="url(#pattern0)"/>
                             </g>
 
                             <rect x="37" width="476" height="300" fill="url(#pattern1)"/>
